@@ -2,8 +2,8 @@ package com.jobreadyprogrammer.spark;
 
 import java.util.Properties;
 
-import static org.apache.spark.sql.functions.concat;
-import static org.apache.spark.sql.functions.lit;
+//import static org.apache.spark.sql.functions.concat;
+//import static org.apache.spark.sql.functions.lit;
 
 
 import org.apache.log4j.Level;

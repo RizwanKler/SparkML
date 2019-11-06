@@ -1,12 +1,12 @@
 package com.jobreadyprogrammer.spark;
 
-import static org.apache.spark.sql.functions.concat;
-import static org.apache.spark.sql.functions.lit;
+//import static org.apache.spark.sql.functions.concat;
+//import static org.apache.spark.sql.functions.lit;
 
 
 import java.util.Properties;
 
-import javax.activation.FileDataSource;
+//import javax.activation.FileDataSource;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -20,7 +20,7 @@ import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SaveMode;
 import org.apache.spark.sql.SparkSession;
-import org.apache.spark.sql.execution.datasources.csv.CSVDataSource;
+//import org.apache.spark.sql.execution.datasources.csv.CSVDataSource;
 //import org.javafxdata.datasources.reader.FileSource;  
 //import org.javafxdata.datasources.provider.CSVDataSource;
 

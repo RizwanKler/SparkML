@@ -1,14 +1,14 @@
 package com.jobreadyprogrammer.spark;
 
-//import static org.apache.spark.sql.functions.concat;
-//import static org.apache.spark.sql.functions.lit;
+import static org.apache.spark.sql.functions.concat;
+import static org.apache.spark.sql.functions.lit;
 
-//import static org.apache.spark.sql.functions.col;
+import static org.apache.spark.sql.functions.col;
 
 
 import java.util.Properties;
 
-///import javax.activation.FileDataSource;
+import javax.activation.FileDataSource;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
@@ -70,12 +70,11 @@ import org.apache.commons.io.FileUtils;
 //import org.apache.spark.sql.sources.v2.DataSourceOptions;
 //import org.apache.spark.sql.sources.v2.ReadSupport;
 //import org.apache.spark.sql.sources.v2.reader.*;
-import org.apache.spark.sql.types.TimestampType;
+//import org.apache.spark.sql.types.TimestampType;
 //import org.datafx.reader.DataReader;
 //import org.spark_project.guava.collect.ImmutableMap;
 
 import javafx.application.Application;
-
 //import javafx.beans.property.StringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -93,8 +92,8 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
 import javafx.scene.control.RadioButton;
 import javafx.scene.control.SelectionMode;
-//import javafx.scene.control.TableColumn;
-//import javafx.scene.control.TableView;
+import javafx.scene.control.TableColumn;
+import javafx.scene.control.TableView;
 import javafx.scene.control.ToggleGroup;
 //import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
@@ -116,30 +115,14 @@ import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
 import scala.collection.JavaConversions;
-//import scala.collection.immutable.Seq;
-//import javafx.scene.input.*;
-//import javafx.scene.media.*;
-
-//import org.datafx.reader.*;
-//import org.datafx.util.*;
-//import org.datafx.provider.*;
 
 //import com.jobreadyprogrammer.spark.KmeansClustering;
-//import com.opencsv.CSVParserBuilder;
-//import com.opencsv.CSVReader;
-//import com.opencsv.CSVReaderBuilder;
-//import com.opencsv.bean.CsvToBean;
-//import com.opencsv.bean.CsvToBeanBuilder;
-//import com.sun.javafx.scene.control.SelectedItemsReadOnlyObservableList;
-//import com.opencsv.bean.CsvBindByPosition;
 
-//import com.sun.javafx.logging.Logger;
-
-//import java.io.IOException;
-//import java.io.Reader;
-//import java.io.StringReader;
-//import java.nio.file.Files;
-//import java.nio.file.Paths;
+import java.io.IOException;
+import java.io.Reader;
+import java.io.StringReader;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
 
 
@@ -309,8 +292,7 @@ public class Main extends Application{
 						}				
 					
 			}});			
-		}				
-	});  
+		}});  
         
     tile.setPadding(new Insets(10, 10, 10, 10));
     tile.setPrefColumns(2);
@@ -385,7 +367,7 @@ private void kmeansC(File upload) {
 			e.printStackTrace();
 		}
 	
-	KmeansClustering.main(uploadStr1);
+	//KmeansClustering.main(uploadStr1);
 	
 	
 	System.out.println("KMeans Training & Testing Datafile Uploaded");	
@@ -403,7 +385,7 @@ private void linearR(File upload) {
 		e.printStackTrace();
 	}
 	
-	LinearMarketingVsSales.main(uploadStr2);
+	//LinearMarketingVsSales.main(uploadStr2);
 		
 	System.out.println("Linear Regression Training & Testing Datafile Uploaded");	
 	
@@ -418,7 +400,7 @@ private void logisticR(File upload) {
 		// TODO Auto-generated catch block
 		e.printStackTrace();
 	}	
-	LogisticRegressionExample.main(null);
+	//LogisticRegressionExample.main(null);
 	
 	System.out.println("Logistic Regression Training & Testing Datafile Uploaded");	
 	
@@ -516,7 +498,7 @@ private void logisticRegression(ObservableList<String> selectedItems, File uploa
 	
 	results.show();
 	
-	TimestampType time;
+	//TimestampType time;
 	
 	// Write to destination
 			String dbConnectionUrl = "jdbc:mysql://localhost/lr_data";

@@ -114,7 +114,8 @@ import javafx.scene.layout.HBox;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
-import scala.collection.JavaConversions;
+import scala.collection.JavaConverters.*;
+import scala.collection.Seq;
 
 //import com.jobreadyprogrammer.spark.KmeansClustering;
 

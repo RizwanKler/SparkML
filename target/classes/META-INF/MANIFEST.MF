@@ -1,97 +1,96 @@
 Manifest-Version: 1.0
 Built-By: rizwa
 Build-Jdk: 12.0.1
-Class-Path: lib/datasources-8.0.1.jar lib/javax.json-1.0.4.jar lib/core-
- 8.0.1.jar lib/javafx-controls-11.0.2.jar lib/javafx-controls-11.0.2-win
- .jar lib/javafx-graphics-11.0.2.jar lib/javafx-graphics-11.0.2-win.jar 
- lib/javafx-base-11.0.2.jar lib/javafx-base-11.0.2-win.jar lib/javafx-fx
- ml-11.jar lib/javafx-fxml-11-win.jar lib/org.eclipse.paho.client.mqttv3
- -1.2.2.jar lib/datafx-core-8.0b5.jar lib/spark-core_2.11-2.4.4.jar lib/
- paranamer-2.8.jar lib/avro-1.8.2.jar lib/jackson-core-asl-1.9.13.jar li
- b/jackson-mapper-asl-1.9.13.jar lib/commons-compress-1.8.1.jar lib/xz-1
- .5.jar lib/avro-mapred-1.8.2-hadoop2.jar lib/avro-ipc-1.8.2.jar lib/com
- mons-codec-1.9.jar lib/chill_2.11-0.9.3.jar lib/kryo-shaded-4.0.2.jar l
- ib/minlog-1.3.0.jar lib/objenesis-2.5.1.jar lib/chill-java-0.9.3.jar li
- b/xbean-asm6-shaded-4.8.jar lib/hadoop-client-2.6.5.jar lib/hadoop-comm
- on-2.6.5.jar lib/commons-cli-1.2.jar lib/xmlenc-0.52.jar lib/commons-ht
- tpclient-3.1.jar lib/commons-collections-3.2.2.jar lib/commons-configur
- ation-1.6.jar lib/commons-digester-1.8.jar lib/commons-beanutils-1.7.0.
- jar lib/gson-2.2.4.jar lib/hadoop-auth-2.6.5.jar lib/httpclient-4.2.5.j
- ar lib/httpcore-4.2.4.jar lib/apacheds-kerberos-codec-2.0.0-M15.jar lib
- /apacheds-i18n-2.0.0-M15.jar lib/api-asn1-api-1.0.0-M20.jar lib/api-uti
- l-1.0.0-M20.jar lib/curator-client-2.6.0.jar lib/htrace-core-3.0.4.jar 
- lib/hadoop-hdfs-2.6.5.jar lib/jetty-util-6.1.26.jar lib/xercesImpl-2.9.
- 1.jar lib/xml-apis-1.3.04.jar lib/hadoop-mapreduce-client-app-2.6.5.jar
-  lib/hadoop-mapreduce-client-common-2.6.5.jar lib/hadoop-yarn-client-2.
- 6.5.jar lib/hadoop-yarn-server-common-2.6.5.jar lib/hadoop-mapreduce-cl
- ient-shuffle-2.6.5.jar lib/hadoop-yarn-api-2.6.5.jar lib/hadoop-mapredu
- ce-client-core-2.6.5.jar lib/hadoop-yarn-common-2.6.5.jar lib/jaxb-api-
- 2.2.2.jar lib/stax-api-1.0-2.jar lib/jackson-jaxrs-1.9.13.jar lib/jacks
- on-xc-1.9.13.jar lib/hadoop-mapreduce-client-jobclient-2.6.5.jar lib/ha
- doop-annotations-2.6.5.jar lib/spark-launcher_2.11-2.4.4.jar lib/spark-
- kvstore_2.11-2.4.4.jar lib/leveldbjni-all-1.8.jar lib/jackson-core-2.6.
- 7.jar lib/jackson-annotations-2.6.7.jar lib/spark-network-common_2.11-2
- .4.4.jar lib/spark-network-shuffle_2.11-2.4.4.jar lib/spark-unsafe_2.11
- -2.4.4.jar lib/activation-1.1.1.jar lib/curator-recipes-2.6.0.jar lib/c
- urator-framework-2.6.0.jar lib/guava-16.0.1.jar lib/zookeeper-3.4.6.jar
-  lib/javax.servlet-api-3.1.0.jar lib/commons-lang3-3.5.jar lib/commons-
- math3-3.4.1.jar lib/jsr305-1.3.9.jar lib/slf4j-api-1.7.16.jar lib/jul-t
- o-slf4j-1.7.16.jar lib/jcl-over-slf4j-1.7.16.jar lib/log4j-1.2.17.jar l
- ib/slf4j-log4j12-1.7.16.jar lib/compress-lzf-1.0.3.jar lib/snappy-java-
- 1.1.7.3.jar lib/lz4-java-1.4.0.jar lib/zstd-jni-1.3.2-2.jar lib/Roaring
- Bitmap-0.7.45.jar lib/shims-0.7.45.jar lib/commons-net-3.1.jar lib/scal
- a-library-2.11.12.jar lib/json4s-jackson_2.11-3.5.3.jar lib/json4s-core
- _2.11-3.5.3.jar lib/json4s-ast_2.11-3.5.3.jar lib/json4s-scalap_2.11-3.
- 5.3.jar lib/scala-xml_2.11-1.0.6.jar lib/jersey-client-2.22.2.jar lib/j
- avax.ws.rs-api-2.0.1.jar lib/hk2-api-2.4.0-b34.jar lib/hk2-utils-2.4.0-
- b34.jar lib/aopalliance-repackaged-2.4.0-b34.jar lib/javax.inject-2.4.0
- -b34.jar lib/hk2-locator-2.4.0-b34.jar lib/javassist-3.18.1-GA.jar lib/
- jersey-common-2.22.2.jar lib/javax.annotation-api-1.2.jar lib/jersey-gu
- ava-2.22.2.jar lib/osgi-resource-locator-1.0.1.jar lib/jersey-server-2.
- 22.2.jar lib/jersey-media-jaxb-2.22.2.jar lib/validation-api-1.1.0.Fina
- l.jar lib/jersey-container-servlet-2.22.2.jar lib/jersey-container-serv
- let-core-2.22.2.jar lib/netty-all-4.1.17.Final.jar lib/netty-3.9.9.Fina
- l.jar lib/stream-2.7.0.jar lib/metrics-core-3.1.5.jar lib/metrics-jvm-3
- .1.5.jar lib/metrics-json-3.1.5.jar lib/metrics-graphite-3.1.5.jar lib/
- jackson-databind-2.6.7.1.jar lib/jackson-module-scala_2.11-2.6.7.1.jar 
- lib/scala-reflect-2.11.8.jar lib/jackson-module-paranamer-2.7.9.jar lib
- /ivy-2.4.0.jar lib/oro-2.0.8.jar lib/pyrolite-4.13.jar lib/py4j-0.10.7.
- jar lib/spark-tags_2.11-2.4.4.jar lib/commons-crypto-1.0.0.jar lib/unus
- ed-1.0.0.jar lib/spark-sql_2.11-2.4.4.jar lib/univocity-parsers-2.7.3.j
- ar lib/spark-sketch_2.11-2.4.4.jar lib/spark-catalyst_2.11-2.4.4.jar li
- b/janino-3.0.9.jar lib/commons-compiler-3.0.9.jar lib/antlr4-runtime-4.
- 7.jar lib/orc-core-1.5.5-nohive.jar lib/orc-shims-1.5.5.jar lib/protobu
- f-java-2.5.0.jar lib/commons-lang-2.6.jar lib/aircompressor-0.10.jar li
- b/orc-mapreduce-1.5.5-nohive.jar lib/parquet-column-1.10.1.jar lib/parq
- uet-common-1.10.1.jar lib/parquet-encoding-1.10.1.jar lib/parquet-hadoo
- p-1.10.1.jar lib/parquet-format-2.4.0.jar lib/parquet-jackson-1.10.1.ja
- r lib/arrow-vector-0.10.0.jar lib/arrow-format-0.10.0.jar lib/arrow-mem
- ory-0.10.0.jar lib/joda-time-2.9.9.jar lib/hppc-0.7.2.jar lib/flatbuffe
- rs-1.2.0-3f79e055.jar lib/spark-mllib_2.11-2.4.4.jar lib/scala-parser-c
- ombinators_2.11-1.1.0.jar lib/spark-streaming_2.11-2.4.4.jar lib/spark-
- graphx_2.11-2.4.4.jar lib/core-1.1.2.jar lib/arpack_combined_all-0.1.ja
- r lib/spark-mllib-local_2.11-2.4.4.jar lib/breeze_2.11-0.13.2.jar lib/b
- reeze-macros_2.11-0.13.2.jar lib/opencsv-2.3.jar lib/jtransforms-2.4.0.
- jar lib/spire_2.11-0.13.0.jar lib/spire-macros_2.11-0.13.0.jar lib/mach
- inist_2.11-0.6.1.jar lib/shapeless_2.11-2.3.2.jar lib/macro-compat_2.11
- -1.1.1.jar lib/spark-sql-kafka-0-10_2.11-2.3.0.jar lib/kafka-clients-0.
- 10.0.1.jar lib/lz4-1.3.0.jar lib/maven-compiler-plugin-3.8.1.jar lib/ma
- ven-plugin-api-3.0.jar lib/maven-model-3.0.jar lib/sisu-inject-plexus-1
- .4.2.jar lib/sisu-inject-bean-1.4.2.jar lib/sisu-guice-2.1.7-noaop.jar 
- lib/maven-artifact-3.0.jar lib/maven-core-3.0.jar lib/maven-settings-3.
- 0.jar lib/maven-settings-builder-3.0.jar lib/maven-repository-metadata-
- 3.0.jar lib/maven-model-builder-3.0.jar lib/maven-aether-provider-3.0.j
- ar lib/aether-impl-1.7.jar lib/aether-spi-1.7.jar lib/aether-api-1.7.ja
- r lib/aether-util-1.7.jar lib/plexus-interpolation-1.14.jar lib/plexus-
- classworlds-2.2.3.jar lib/plexus-component-annotations-1.5.5.jar lib/pl
- exus-sec-dispatcher-1.3.jar lib/plexus-cipher-1.4.jar lib/maven-shared-
- utils-3.2.1.jar lib/commons-io-2.5.jar lib/maven-shared-incremental-1.1
- .jar lib/plexus-java-0.9.10.jar lib/asm-6.2.jar lib/qdox-2.0-M8.jar lib
- /plexus-compiler-api-2.8.4.jar lib/plexus-compiler-manager-2.8.4.jar li
- b/plexus-compiler-javac-2.8.4.jar lib/mysql-connector-java-5.1.44.jar l
- ib/maven-clean-plugin-2.5.jar lib/plexus-utils-3.0.jar lib/maven-instal
- l-plugin-3.0.0-M1.jar lib/maven-artifact-transfer-0.10.0.jar lib/maven-
- common-artifact-filters-3.0.1.jar
+Class-Path: lib/mysql-connector-java-5.1.44.jar lib/scala-collection-com
+ pat_2.11-2.1.2.jar lib/scala-library-2.11.8.jar lib/maven-shade-plugin-
+ 3.2.1.jar lib/maven-plugin-api-3.0.jar lib/sisu-inject-plexus-1.4.2.jar
+  lib/sisu-inject-bean-1.4.2.jar lib/sisu-guice-2.1.7-noaop.jar lib/mave
+ n-model-3.0.jar lib/maven-core-3.0.jar lib/maven-settings-3.0.jar lib/m
+ aven-settings-builder-3.0.jar lib/maven-repository-metadata-3.0.jar lib
+ /maven-model-builder-3.0.jar lib/maven-aether-provider-3.0.jar lib/aeth
+ er-impl-1.7.jar lib/aether-spi-1.7.jar lib/aether-api-1.7.jar lib/aethe
+ r-util-1.7.jar lib/plexus-interpolation-1.14.jar lib/plexus-classworlds
+ -2.2.3.jar lib/plexus-component-annotations-1.5.5.jar lib/plexus-sec-di
+ spatcher-1.3.jar lib/plexus-cipher-1.4.jar lib/maven-artifact-3.0.jar l
+ ib/plexus-utils-3.1.0.jar lib/maven-artifact-transfer-0.10.0.jar lib/ma
+ ven-common-artifact-filters-3.0.1.jar lib/maven-shared-utils-3.1.0.jar 
+ lib/asm-7.0.jar lib/asm-commons-7.0.jar lib/asm-tree-7.0.jar lib/asm-an
+ alysis-7.0.jar lib/jdom2-2.0.6.jar lib/maven-dependency-tree-3.0.1.jar 
+ lib/aether-util-0.9.0.M2.jar lib/commons-io-2.5.jar lib/jdependency-2.1
+ .1.jar lib/asm-util-7.0-beta.jar lib/guava-19.0.jar lib/javafx-controls
+ -12.0.2.jar lib/javafx-controls-12.0.2-win.jar lib/javafx-graphics-12.0
+ .2.jar lib/javafx-graphics-12.0.2-win.jar lib/javafx-base-12.0.2.jar li
+ b/javafx-base-12.0.2-win.jar lib/spark-core_2.11-2.4.3.jar lib/paraname
+ r-2.8.jar lib/avro-1.8.2.jar lib/commons-compress-1.8.1.jar lib/xz-1.5.
+ jar lib/avro-mapred-1.8.2-hadoop2.jar lib/avro-ipc-1.8.2.jar lib/chill_
+ 2.11-0.9.3.jar lib/kryo-shaded-4.0.2.jar lib/minlog-1.3.0.jar lib/objen
+ esis-2.5.1.jar lib/chill-java-0.9.3.jar lib/xbean-asm6-shaded-4.8.jar l
+ ib/hadoop-client-2.6.5.jar lib/hadoop-common-2.6.5.jar lib/commons-http
+ client-3.1.jar lib/commons-collections-3.2.2.jar lib/commons-configurat
+ ion-1.6.jar lib/commons-digester-1.8.jar lib/commons-beanutils-1.7.0.ja
+ r lib/gson-2.2.4.jar lib/hadoop-auth-2.6.5.jar lib/httpclient-4.2.5.jar
+  lib/httpcore-4.2.4.jar lib/apacheds-kerberos-codec-2.0.0-M15.jar lib/a
+ pacheds-i18n-2.0.0-M15.jar lib/api-asn1-api-1.0.0-M20.jar lib/api-util-
+ 1.0.0-M20.jar lib/curator-client-2.6.0.jar lib/htrace-core-3.0.4.jar li
+ b/hadoop-mapreduce-client-app-2.6.5.jar lib/hadoop-mapreduce-client-com
+ mon-2.6.5.jar lib/hadoop-yarn-client-2.6.5.jar lib/hadoop-yarn-server-c
+ ommon-2.6.5.jar lib/hadoop-mapreduce-client-shuffle-2.6.5.jar lib/hadoo
+ p-yarn-api-2.6.5.jar lib/hadoop-mapreduce-client-core-2.6.5.jar lib/had
+ oop-yarn-common-2.6.5.jar lib/jaxb-api-2.2.2.jar lib/stax-api-1.0-2.jar
+  lib/jackson-jaxrs-1.9.13.jar lib/jackson-xc-1.9.13.jar lib/hadoop-mapr
+ educe-client-jobclient-2.6.5.jar lib/hadoop-annotations-2.6.5.jar lib/s
+ park-launcher_2.11-2.4.3.jar lib/spark-kvstore_2.11-2.4.3.jar lib/level
+ dbjni-all-1.8.jar lib/jackson-core-2.6.7.jar lib/jackson-annotations-2.
+ 6.7.jar lib/spark-network-common_2.11-2.4.3.jar lib/spark-network-shuff
+ le_2.11-2.4.3.jar lib/spark-unsafe_2.11-2.4.3.jar lib/activation-1.1.1.
+ jar lib/curator-recipes-2.6.0.jar lib/curator-framework-2.6.0.jar lib/z
+ ookeeper-3.4.6.jar lib/javax.servlet-api-3.1.0.jar lib/commons-lang3-3.
+ 5.jar lib/commons-math3-3.4.1.jar lib/jsr305-1.3.9.jar lib/slf4j-api-1.
+ 7.16.jar lib/jul-to-slf4j-1.7.16.jar lib/jcl-over-slf4j-1.7.16.jar lib/
+ log4j-1.2.17.jar lib/slf4j-log4j12-1.7.16.jar lib/compress-lzf-1.0.3.ja
+ r lib/snappy-java-1.1.7.3.jar lib/lz4-java-1.4.0.jar lib/zstd-jni-1.3.2
+ -2.jar lib/RoaringBitmap-0.7.45.jar lib/shims-0.7.45.jar lib/commons-ne
+ t-3.1.jar lib/json4s-jackson_2.11-3.5.3.jar lib/json4s-core_2.11-3.5.3.
+ jar lib/json4s-ast_2.11-3.5.3.jar lib/json4s-scalap_2.11-3.5.3.jar lib/
+ scala-xml_2.11-1.0.6.jar lib/jersey-client-2.22.2.jar lib/javax.ws.rs-a
+ pi-2.0.1.jar lib/hk2-api-2.4.0-b34.jar lib/hk2-utils-2.4.0-b34.jar lib/
+ aopalliance-repackaged-2.4.0-b34.jar lib/javax.inject-2.4.0-b34.jar lib
+ /hk2-locator-2.4.0-b34.jar lib/javassist-3.18.1-GA.jar lib/jersey-commo
+ n-2.22.2.jar lib/javax.annotation-api-1.2.jar lib/jersey-guava-2.22.2.j
+ ar lib/osgi-resource-locator-1.0.1.jar lib/jersey-server-2.22.2.jar lib
+ /jersey-media-jaxb-2.22.2.jar lib/validation-api-1.1.0.Final.jar lib/je
+ rsey-container-servlet-2.22.2.jar lib/jersey-container-servlet-core-2.2
+ 2.2.jar lib/netty-all-4.1.17.Final.jar lib/netty-3.9.9.Final.jar lib/st
+ ream-2.7.0.jar lib/metrics-core-3.1.5.jar lib/metrics-jvm-3.1.5.jar lib
+ /metrics-json-3.1.5.jar lib/metrics-graphite-3.1.5.jar lib/jackson-data
+ bind-2.6.7.1.jar lib/jackson-module-scala_2.11-2.6.7.1.jar lib/scala-re
+ flect-2.11.8.jar lib/jackson-module-paranamer-2.7.9.jar lib/ivy-2.4.0.j
+ ar lib/oro-2.0.8.jar lib/pyrolite-4.13.jar lib/py4j-0.10.7.jar lib/spar
+ k-tags_2.11-2.4.3.jar lib/commons-crypto-1.0.0.jar lib/unused-1.0.0.jar
+  lib/spark-sql_2.11-2.4.3.jar lib/univocity-parsers-2.7.3.jar lib/spark
+ -sketch_2.11-2.4.3.jar lib/spark-catalyst_2.11-2.4.3.jar lib/janino-3.0
+ .9.jar lib/commons-compiler-3.0.9.jar lib/antlr4-runtime-4.7.jar lib/or
+ c-core-1.5.5-nohive.jar lib/orc-shims-1.5.5.jar lib/aircompressor-0.10.
+ jar lib/orc-mapreduce-1.5.5-nohive.jar lib/parquet-column-1.10.1.jar li
+ b/parquet-common-1.10.1.jar lib/parquet-encoding-1.10.1.jar lib/parquet
+ -hadoop-1.10.1.jar lib/parquet-format-2.4.0.jar lib/parquet-jackson-1.1
+ 0.1.jar lib/arrow-vector-0.10.0.jar lib/arrow-format-0.10.0.jar lib/arr
+ ow-memory-0.10.0.jar lib/joda-time-2.9.9.jar lib/hppc-0.7.2.jar lib/fla
+ tbuffers-1.2.0-3f79e055.jar lib/hadoop-hdfs-2.2.0.jar lib/jetty-6.1.26.
+ jar lib/jetty-util-6.1.26.jar lib/jersey-core-1.9.jar lib/jersey-server
+ -1.9.jar lib/asm-3.1.jar lib/commons-cli-1.2.jar lib/commons-codec-1.4.
+ jar lib/commons-lang-2.5.jar lib/commons-logging-1.1.1.jar lib/commons-
+ daemon-1.0.13.jar lib/jsp-api-2.1.jar lib/protobuf-java-2.5.0.jar lib/s
+ ervlet-api-2.5.jar lib/jackson-core-asl-1.8.8.jar lib/jackson-mapper-as
+ l-1.8.8.jar lib/jasper-runtime-5.5.23.jar lib/commons-el-1.0.jar lib/xm
+ lenc-0.52.jar lib/spark-mllib_2.11-2.4.3.jar lib/scala-parser-combinato
+ rs_2.11-1.1.0.jar lib/spark-streaming_2.11-2.4.3.jar lib/spark-graphx_2
+ .11-2.4.3.jar lib/core-1.1.2.jar lib/arpack_combined_all-0.1.jar lib/sp
+ ark-mllib-local_2.11-2.4.3.jar lib/breeze_2.11-0.13.2.jar lib/breeze-ma
+ cros_2.11-0.13.2.jar lib/opencsv-2.3.jar lib/jtransforms-2.4.0.jar lib/
+ spire_2.11-0.13.0.jar lib/spire-macros_2.11-0.13.0.jar lib/machinist_2.
+ 11-0.6.1.jar lib/shapeless_2.11-2.3.2.jar lib/macro-compat_2.11-1.1.1.j
+ ar
 Main-Class: com.jobreadyprogrammer.spark.Main
 Created-By: Maven Integration for Eclipse
 

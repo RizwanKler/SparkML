@@ -12,14 +12,14 @@ import javax.activation.FileDataSource;
 
 import org.apache.log4j.Level;
 import org.apache.log4j.Logger;
-//import org.apache.spark.SparkContext;
+import org.apache.spark.SparkContext;
 import org.apache.spark.ml.Pipeline;
 import org.apache.spark.ml.PipelineModel;
 import org.apache.spark.ml.PipelineStage;
 import org.apache.spark.ml.classification.LogisticRegression;
-//import org.apache.spark.ml.feature.StringIndexer;
+import org.apache.spark.ml.feature.StringIndexer;
 import org.apache.spark.ml.feature.VectorAssembler;
-//import org.apache.spark.sql.Column;
+import org.apache.spark.sql.Column;
 import org.apache.spark.sql.Dataset;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SaveMode;
@@ -29,23 +29,22 @@ import org.apache.spark.sql.SparkSession;
 import java.awt.Desktop;
 import java.io.BufferedReader;
 import java.io.File;
-//import java.io.FileNotFoundException;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
-//import java.util.HashMap;
+import java.util.HashMap;
 import java.util.List;
-//import java.util.ListIterator;
-//import java.util.Map;
-//import java.util.Properties;
-//import java.util.Scanner;
-//import java.util.concurrent.TimeUnit;
+import java.util.ListIterator;
+import java.util.Map;
+import java.util.Properties;
+import java.util.Scanner;
+import java.util.concurrent.TimeUnit;
 
-//import javax.activation.FileDataSource;
-//import javax.swing.filechooser.FileView;
+import javax.activation.FileDataSource;
+import javax.swing.filechooser.FileView;
 
-//import java.nio.file.Paths;
-//import java.nio.file.FileSystems;
+import java.nio.file.Paths;
 
 //import org.apache.commons.csv.CSVFormat;
 //import org.apache.commons.csv.CSVParser;
@@ -53,39 +52,40 @@ import java.util.List;
 
 import org.apache.commons.io.FileUtils;
 //import org.apache.kafka.common.record.Record;
-//import org.apache.log4j.Level;
-//import org.apache.log4j.Logger;
-//import org.apache.spark.ml.Pipeline;
-//import org.apache.spark.ml.PipelineModel;
-//import org.apache.spark.ml.PipelineStage;
-//import org.apache.spark.ml.classification.LogisticRegression;
-//import org.apache.spark.ml.feature.StringIndexer;
-//import org.apache.spark.ml.feature.VectorAssembler;
-//import org.apache.spark.sql.Dataset;
-//import org.apache.spark.sql.Row;
-//import org.apache.spark.sql.SaveMode;
-//import org.apache.spark.sql.SparkSession;
-//import org.apache.spark.sql.catalog.Table;
+import org.apache.log4j.Level;
+import org.apache.log4j.Logger;
+import org.apache.spark.ml.Pipeline;
+import org.apache.spark.ml.PipelineModel;
+import org.apache.spark.ml.PipelineStage;
+import org.apache.spark.ml.classification.LogisticRegression;
+import org.apache.spark.ml.feature.StringIndexer;
+import org.apache.spark.ml.feature.VectorAssembler;
+import org.apache.spark.sql.Dataset;
+import org.apache.spark.sql.Row;
+import org.apache.spark.sql.SaveMode;
+import org.apache.spark.sql.SparkSession;
+import org.apache.spark.sql.catalog.Table;
 //import org.apache.spark.sql.execution.datasources.csv.CSVDataSource;
 //import org.apache.spark.sql.sources.v2.DataSourceOptions;
 //import org.apache.spark.sql.sources.v2.ReadSupport;
 //import org.apache.spark.sql.sources.v2.reader.*;
-//import org.apache.spark.sql.types.TimestampType;
+import org.apache.spark.sql.types.TimestampType;
 //import org.datafx.reader.DataReader;
 //import org.spark_project.guava.collect.ImmutableMap;
 
 import javafx.application.Application;
-//import javafx.beans.property.StringProperty;
+import scala.collection.immutable.Seq;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-//import javafx.scene.Group;
-//import javafx.scene.Node;
-//import javafx.scene.Parent;
+import javafx.scene.Group;
+import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.fxml.FXML;
-//import javafx.fxml.FXMLLoader;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -95,26 +95,28 @@ import javafx.scene.control.SelectionMode;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.ToggleGroup;
-//import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-//import javafx.scene.layout.StackPane;
+import javafx.scene.layout.StackPane;
 import javafx.scene.layout.TilePane;
 import javafx.scene.layout.VBox;
-//import javafx.scene.media.Media;
+import javafx.scene.media.Media;
 import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.scene.web.WebEngine;
 import javafx.scene.web.WebView;
-//import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
-//import javafx.scene.layout.GridPane;
+import javafx.scene.layout.GridPane;
 import javafx.scene.layout.HBox;
 import javafx.stage.FileChooser;
 import javafx.stage.FileChooser.ExtensionFilter;
 import javafx.stage.Stage;
-import scala.collection.JavaConversions;
+//import scala.collection.JavaConversions;
+import scala.collection.JavaConverters;
+import scala.collection.JavaConverters.*;
 
 //import com.jobreadyprogrammer.spark.KmeansClustering;
 
@@ -125,10 +127,9 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 
-
 public class Main extends Application{
 
-@SuppressWarnings("unchecked")		
+//@SuppressWarnings("unchecked")		
 @Override
   public void start(final Stage primaryStage) throws Exception{
 	
@@ -249,7 +250,7 @@ public class Main extends Application{
 		    }		   		    
 		 }
     
-		private void runML(final File upload) {
+		public void runML(final File upload) {
 			// TODO Auto-generated method stub
 			
 			btn2.setOnAction(new EventHandler<ActionEvent>() {
@@ -333,7 +334,7 @@ public static void main(String[] args) {
   }
 
 //@SuppressWarnings("unchecked")
-private void readCSV(ListView<String> listView,  File upload) {
+public void readCSV(ListView<String> listView,  File upload) {
 	
 	ObservableList<String> list = FXCollections.observableArrayList();
 	
@@ -406,13 +407,13 @@ private void logisticR(File upload) {
 	
 }
 
-@SuppressWarnings("null")
-private void logisticRegression(ObservableList<String> selectedItems, File upload) {
+//@SuppressWarnings("null")
+public void logisticRegression(ObservableList<String> selectedItems, File upload) {
 	 	
 	Logger.getLogger("org").setLevel(Level.ERROR);
 	Logger.getLogger("akka").setLevel(Level.ERROR);
 	
-	//System.out.println("after Logger before Sparksession");
+	System.out.println("after Logger before Sparksession");
 	
 	SparkSession spark = new SparkSession.Builder()
 			.appName("Logistic-Regression MLlib")
@@ -432,15 +433,12 @@ private void logisticRegression(ObservableList<String> selectedItems, File uploa
 	
 	System.out.println("Datafile uploaded");
 	
-	 for(String s : selectedItems){
-       //  System.out.println("selected item " + s);
-	 }
 	 
 	 String [] str = new String [selectedItems.size()];
 	 
 	 List<String> filterColumns = new ArrayList<String>();
 	 
-	// Seq<String> seqStr;
+	// scala.collection.Seq<String> seqStr;
 	 
 	 for (int i =0; i<= selectedItems.size()-2; i++)
 	 {
@@ -449,14 +447,27 @@ private void logisticRegression(ObservableList<String> selectedItems, File uploa
 		 filterColumns.add(new String(selectedItems.get(i)));
 		 
 	 }
-	  
+	 
+	 
+			 System.out.println("After columnsDF Before Select"); 
+			 
+			 
 	Dataset<Row> lblFeatureDf = treatmentDf.withColumnRenamed(selectedItems.get(selectedItems.size()-1), "label")
-		
-.select("label", JavaConversions.asScalaBuffer(filterColumns).seq());
-
+			
+	// THIS WORKED WITH JavaConversions	
+			
+//.select("label", JavaConversions.asScalaBuffer(filterColumns).seq());
+			
+	
+		.select("label", Convert(filterColumns));
+	
+	
+	//	.select("label", JavaConverters.asScalaIteratorConverter(filterColumns.iterator()).asScala().seq());
+			
+	
 	String [] filterColumns2 = new String[filterColumns.size()];
 	for (int i=0; i < filterColumns.size (); i++) {
-		//System.out.println("count loop " +filterColumns.get(i).toString().toLowerCase());
+	System.out.println("count loop " +filterColumns.get(i).toString().toLowerCase());
 		filterColumns2[i] = filterColumns.get(i).toString().toLowerCase();
 	}
 	
@@ -470,7 +481,7 @@ private void logisticRegression(ObservableList<String> selectedItems, File uploa
 			.setInputCols(filterColumns2)
 			.setOutputCol("features");
 	
-//	System.out.println("VectorAssembler Created");
+	System.out.println("VectorAssembler Created");
 	
 	Dataset<Row> [] splitData = lblFeatureDf.randomSplit(new double[] {.7, .3});
 	Dataset<Row> trainingDf = splitData[0];
@@ -486,44 +497,66 @@ private void logisticRegression(ObservableList<String> selectedItems, File uploa
 	
 	pl.setStages(new PipelineStage [] {assembler, logReg});
 	
-//	System.out.println("PipelineStages Created");
+	System.out.println("PipelineStages Created");
 	
 	PipelineModel model = pl.fit(trainingDf);
 	
-//	System.out.println("PipeLineModel Created");
+	System.out.println("PipeLineModel Created");
 	
 	Dataset<Row> results = model.transform(testingDf);
 	
-	System.out.println("results created");
 	
 	results.show();
 	
 	//TimestampType time;
 	
+	System.out.println("Starting MySQL instance");
+	
 	// Write to destination
-			String dbConnectionUrl = "jdbc:mysql://localhost/lr_data";
+			String dbConnectionUrl = "jdbc:mysql://localhost/ml_project";
+			
+			
+			System.out.println("MySQL instance Created");
 			
 			Properties prop = new Properties();
+			
 		    prop.setProperty("driver", "com.mysql.jdbc.Driver");
+		    
 		    prop.setProperty("user", "root");
 		    prop.setProperty("password", "root");
+		   
 		    
-		results.select("prediction", JavaConversions.asScalaBuffer(filterColumns).seq())
-	.write()
+	//	results.select("prediction", JavaConversions.asScalaBuffer(filterColumns).seq())
+		
+	//	results.select("prediction", (scala.collection.Seq<String>) JavaConverters.asScalaIteratorConverter(filterColumns.iterator()).asScala().toSeq())
+		    results.select("prediction", Convert(filterColumns))
+		    .write()
 //	.format("csv")
 	.mode(SaveMode.Overwrite)
 	
 	.jdbc(dbConnectionUrl, "lr_table", prop);
+		    
+		    System.out.println("Converted Columns Selected and Written to DB");	    
     results.write()    
     .mode(SaveMode.Overwrite)
     
     .format("json")
 //    .format("csv")
 //  
-    .save("/Users/rizwa/Documents/workspace/sparkwithjava-master/project9/logregModel/LogisticRegression");	
-    
+ //   .save("/Users/rizwa/Documents/workspace/sparkwithjava-master/project9/models/LogisticRegression");	
+    .save("/Users/rizwa/Documents/workspace/sparkwithjava-master/Data Models/Logistic Regression");	
     System.out.println("saving model");
 	
+}
+
+private Seq<String> Convert(List<String> filterColumns) {
+	
+	System.out.println("Inside Convert");
+	
+	Seq<String> temp = (Seq<String>) JavaConverters.asScalaIteratorConverter(filterColumns.iterator()).asScala().toSeq();
+//	return (Seq<String>) JavaConverters.asScalaIteratorConverter(filterColumns.iterator()).asScala().toSeq();
+	System.out.println("Before return");
+	return temp;
 }
 }
 
